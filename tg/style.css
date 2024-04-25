@@ -1,0 +1,36 @@
+body{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background: #262c37;
+}
+
+.wrapper{
+    
+}
+
+.page{
+    padding: 3.125rem;
+}
+
+.form{
+    max-width: 18.75rem;
+    margin: 0 auto;
+    display: grid;
+    gap: 0.9375rem;
+}
+
+.form__input{
+    width: 100%;
+    padding: 0.625rem;
+    height: 2.5rem;
+}
+
+
+textarea.form__input{
+    height: 6.25rem;
+}
+.form__button{
+    background-color: #0e5da7;
+    height: 2.5rem;
+    color: #fff;
+    text-transform: uppercase;
+}
