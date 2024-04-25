@@ -1,22 +1,22 @@
-const form = document.querySelector('.form');
-form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    sendMessage(form);
-})
+const form = document.querySelector('#form')
 
-async function sendMessage(form) {
-    const formData = new FormData(form);
-    if (formData) {
-        const url = 'cdntestmeta.000webhostapp.com/tg/sendmessage.php';
-        const response = await fetch(url, {
-            method: "POST",
-            body: formData
-        });
-        if (response.ok) {
-            form.reset();
-            alert('Form sent!');
-        } else {
-            alert('Error');
-        }
-    }
-}
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
+    
+    var text = document.querySelector("#text").value
+    
+    var token = "7161235839:AAGeXK3gadLb9neyRwmLEuo9i5ayRVaY3pc"
+    
+    var chat_id = "-4129736336"
+    
+    var my_text = 'my text is$(text)'
+    
+    var url = 'https://api.telegram.org/bot$(token)/sendMessage?chat_id=$(chat_id)&text=$(my_text)'
+    
+    
+    let api = new XMLHttpRequest()
+    api.open("GET", url, true)
+    api.send()
+    
+    text.value = ""
+})
